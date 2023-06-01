@@ -110,12 +110,14 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
+      <video id="teaser" autoplay muted loop playsinline preload="metadata" height="100%">
         <source src="./static/videos/teaser-h265.mp4"
-                type="video/mp4">
+          type="video/mp4">
+        <source src="./static/videos/teaser-h264.mp4"
+          type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
-      </h2>
+      <!-- <h2 class="subtitle has-text-centered"> -->
+      <!-- </h2> -->
     </div>
   </div>
 </section>
@@ -149,11 +151,47 @@
   </div>
 </section>
 
-<section class="hero is-small">
+<section class="hero">
   <div class="hero-body">
-    <div class="container has-text-centered">
+    <div class="container  is-max-desktop">
+    <h2 class="title is-3">Colorization Results (H265)</h2>
       <div id="results-carousel" class="carousel results-carousel is-vcentered">
-        
+        <div class="item">
+          <video poster="" autoplay controls muted loop height="100%">
+            <source src="./static/videos/results/Vineyard.mp4" type="video/mp4">
+            Your browser does not support H265 video.
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay controls muted loop height="100%">
+            <source src="./static/videos/results/gold-fish.mp4" type="video/mp4">
+            Your browser does not support H265 video.
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay controls muted loop height="100%">
+            <source src="./static/videos/results/TimeSquareTraffic.mp4" type="video/mp4">
+            Your browser does not support H265 video.
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay controls muted loop height="100%">
+            <source src="./static/videos/results/Cycling.mp4" type="video/mp4">
+            Your browser does not support H265 video.
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay controls muted loop height="100%">
+            <source src="./static/videos/results/goat.mp4" type="video/mp4">
+            Your browser does not support H265 video.
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay controls muted loop height="100%">
+            <source src="./static/videos/results/Koala.mp4" type="video/mp4">
+            Your browser does not support H265 video.
+          </video>
+        </div>
       </div>
     </div>
   </div>
@@ -173,45 +211,8 @@
           Method overview. 
           </p>
         </div>
-
-        <!-- <h3 class="title is-4">Section</h3>
-        <div class="content has-text-justified">
-          <p>
-            Text
-          </p>
-        </div>
-        <div class="content has-text-centered">
-
-        </div> -->
-
       </div>
     </div>
-    <!-- <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Results</h2>
-        <h3 class="title is-4"></h3>
-        <div class="content has-text-justified">
-        </div>
-        <h3 class="title is-4"></h3>
-        <div class="content has-text-justified">
-        </div>
-      </div>
-    </div> -->
-
-
-    <!-- Concurrent Work. -->
-    <!-- <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Concurrent Work. -->
 
   </div>
 </section>
