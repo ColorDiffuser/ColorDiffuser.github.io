@@ -75,5 +75,8 @@ $(document).ready(function() {
     // $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
 
     // bulmaSlider.attach();
-
+    if($(".item video")[0].currentSrc.indexOf("webm")!=-1)
+    {
+      $("#video-hint").style.visibility = "visible";
+    }
 })

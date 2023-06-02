@@ -110,8 +110,8 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline preload="metadata" height="100%">
-        <source src="./static/videos/teaser-H.265.mp4"
+      <video id="teaser" autoplay muted loop playsinline preload height="100%">
+        <source src="./static/videos/teaser-h265.mp4"
           type="video/mp4">
         <source src="./static/videos/teaser-h264.mp4"
           type="video/mp4">
@@ -154,41 +154,48 @@
 <section class="hero">
   <div class="hero-body">
     <div class="container  is-max-desktop">
-    <h2 class="title is-3">Colorization Results (H.265)</h2>
+    <h2 class="title is-3">Colorization Results</h2>
+    <h3 class="title is-4" id="video-hint" hidden>Playing low-quality webm version as your browser does not support H.265</h3>
       <div id="results-carousel" class="carousel results-carousel is-vcentered">
         <div class="item">
           <video poster="" autoplay controls muted loop height="100%">
             <source src="./static/videos/results/Vineyard.mp4" type="video/mp4">
+            <source src="./static/videos/results/Vineyard.webm" type="video/webm">
             Your browser does not support H.265 video.
           </video>
         </div>
         <div class="item">
           <video poster="" autoplay controls muted loop height="100%">
             <source src="./static/videos/results/gold-fish.mp4" type="video/mp4">
+            <source src="./static/videos/results/gold-fish.webm" type="video/webm">
             Your browser does not support H.265 video.
           </video>
         </div>
         <div class="item">
           <video poster="" autoplay controls muted loop height="100%">
             <source src="./static/videos/results/TimeSquareTraffic.mp4" type="video/mp4">
+            <source src="./static/videos/results/TimeSquareTraffic.webm" type="video/webm">
             Your browser does not support H.265 video.
           </video>
         </div>
         <div class="item">
           <video poster="" autoplay controls muted loop height="100%">
             <source src="./static/videos/results/Cycling.mp4" type="video/mp4">
+            <source src="./static/videos/results/Cycling.webm" type="video/webm">
             Your browser does not support H.265 video.
           </video>
         </div>
         <div class="item">
           <video poster="" autoplay controls muted loop height="100%">
             <source src="./static/videos/results/goat.mp4" type="video/mp4">
+            <source src="./static/videos/results/goat.webm" type="video/webm">
             Your browser does not support H.265 video.
           </video>
         </div>
         <div class="item">
           <video poster="" autoplay controls muted loop height="100%">
             <source src="./static/videos/results/Koala.mp4" type="video/mp4">
+            <source src="./static/videos/results/Koala.webm" type="video/webm">
             Your browser does not support H.265 video.
           </video>
         </div>
@@ -208,7 +215,12 @@
             <img src="./static/images/overview.png"></img>
           </p>
           <p>
-          Method overview. 
+            <ul>
+              <li>We extend the pre-trained Stable Diffusion model to a reference-based frame colorization model. With the adapter-based mechanism, we obtain a conditional text-to-image latent diffusion model that leverages the power of the pre-trained Stable Diffusion model to render colors in the latent space \(z_c\), according to the visual semantics of the grayscale input \(g=\mathcal{E_g}(I_g)\), the text input, and the reference color latent \(z_{\texttt{ref},t}\). 
+              </li>
+              <li>During the inference, for each frame in the input grayscale video, we perform a parallel sampling process. Each sampling step for a particular frame is conditioned on the latent information from the previous sampling step of an adjacent frame. Essentially, the <i>Color Propagation Attention</i> and the <i>Alternated Sampling Strategy</i> coordinate the reverse diffusion process and enable bidirectional propagation of color information between adjacent frames to ensure consistency in colorization over time.
+              </li>
+            </ul>
           </p>
         </div>
       </div>
